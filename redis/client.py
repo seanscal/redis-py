@@ -543,7 +543,7 @@ class StrictRedis(object):
                     })
             connection_pool = ConnectionPool(**kwargs)
         self.connection_pool = connection_pool
-        self._use_lua_lock = None
+        self._use_lua_lock = False
 
         self.response_callbacks = self.__class__.RESPONSE_CALLBACKS.copy()
 
